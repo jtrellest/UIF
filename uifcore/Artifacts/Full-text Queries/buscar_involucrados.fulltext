@@ -9,17 +9,17 @@
     </outputs>
     <outputs xsi:type="nsDataserviceContract:ArrayElement" name="Results">
       <item xsi:type="nsDataserviceContract:StructureElement" name="Items">
-        <elements xsi:type="nsDataserviceContract:AttributeElement" name="fullname" label="Nombres Completos" sortable="true">
+        <elements xsi:type="nsDataserviceContract:AttributeElement" name="fullname" label="Fullname" sortable="true">
           <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
         </elements>
         <elements xsi:type="nsDataserviceContract:AttributeElement" name="tipo_id" label="Tipo ID" sortable="true">
           <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
         </elements>
+        <elements xsi:type="nsDataserviceContract:AttributeElement" name="id_principal" label="ID Principal" sortable="true">
+          <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+        </elements>
         <elements xsi:type="nsDataserviceContract:AttributeElement" name="r_creation_date" label="Fecha Creacion" sortable="true">
           <attributeType xsi:type="nsAttributeDatatypes:DateTimeType"/>
-        </elements>
-        <elements xsi:type="nsDataserviceContract:AttributeElement" name="id" label="Nro. Identificacion" sortable="true">
-          <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
         </elements>
         <elements xsi:type="nsDataserviceContract:AttributeElement" name="id" label="Object ID" sortable="true" hidden="true">
           <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
@@ -36,82 +36,103 @@
       </item>
     </outputs>
     <primaryElement>
-      <dataModel href="urn:uif:com.emc.xcp.artifact.folder:Artifacts/Folders/f_involucrado.folder#/"/>
+      <dataModel href="urn:uif:com.emc.xcp.artifact.folder:Artifacts/Folders/involucrado.folder#/"/>
     </primaryElement>
+    <facets name="facet_genero" label="Genero">
+      <facetType xsi:type="nsDataserviceContract:AttributeDataTypeFacet">
+        <attributeType xsi:type="nsPicklist:PickListType" href="urn:uif:com.emc.xcp.artifact.folder:Artifacts/Folders/involucrado.folder#//@attributes[name='genero']/@type"/>
+      </facetType>
+    </facets>
     <facets name="facet_pais_nacimiento" label="Pais Nacimiento">
       <facetType xsi:type="nsDataserviceContract:AttributeDataTypeFacet">
-        <attributeType xsi:type="nsAttributeDatatypes:StringType" href="urn:uif:com.emc.xcp.artifact.folder:Artifacts/Folders/f_involucrado.folder#//@attributes[name='nacimiento_pais']/@type"/>
+        <attributeType xsi:type="nsAttributeDatatypes:StringType" href="urn:uif:com.emc.xcp.artifact.folder:Artifacts/Folders/involucrado.folder#//@attributes[name='nacimiento_pais']/@type"/>
       </facetType>
     </facets>
     <facets name="facet_profesiones" label="Profesiones">
       <facetType xsi:type="nsDataserviceContract:AttributeDataTypeFacet">
-        <attributeType xsi:type="nsAttributeDatatypes:StringType" href="urn:uif:com.emc.xcp.artifact.folder:Artifacts/Folders/f_involucrado.folder#//@attributes[name='profesiones']/@type"/>
+        <attributeType xsi:type="nsAttributeDatatypes:StringType" href="urn:uif:com.emc.xcp.artifact.folder:Artifacts/Folders/involucrado.folder#//@attributes[name='profesiones']/@type"/>
       </facetType>
     </facets>
     <facets name="facet_tipo_persona" label="Tipo Persona">
       <facetType xsi:type="nsDataserviceContract:AttributeDataTypeFacet">
-        <attributeType xsi:type="nsPicklist:PickListType" href="urn:uif:com.emc.xcp.artifact.folder:Artifacts/Folders/f_involucrado.folder#//@attributes[name='tipo_persona']/@type"/>
+        <attributeType xsi:type="nsPicklist:PickListType" href="urn:uif:com.emc.xcp.artifact.folder:Artifacts/Folders/involucrado.folder#//@attributes[name='tipo_persona']/@type"/>
       </facetType>
     </facets>
   </datasource>
-  <columns label="Nombres Completos" sortable="true">
+  <columns label="Fullname" sortable="true">
     <contextSelection>
       <parentRef>
-        <dataRef href="urn:uif:com.emc.xcp.artifact.folder:Artifacts/Folders/f_involucrado.folder#/"/>
+        <dataRef href="urn:uif:com.emc.xcp.artifact.folder:Artifacts/Folders/involucrado.folder#/"/>
       </parentRef>
-      <dataRef href="urn:uif:com.emc.xcp.artifact.folder:Artifacts/Folders/f_involucrado.folder#//@attributes[name='fullname']"/>
+      <dataRef href="urn:uif:com.emc.xcp.artifact.folder:Artifacts/Folders/involucrado.folder#//@attributes[name='fullname']"/>
     </contextSelection>
   </columns>
   <columns label="Tipo ID" sortable="true">
     <contextSelection>
       <parentRef>
-        <dataRef href="urn:uif:com.emc.xcp.artifact.folder:Artifacts/Folders/f_involucrado.folder#/"/>
+        <dataRef href="urn:uif:com.emc.xcp.artifact.folder:Artifacts/Folders/involucrado.folder#/"/>
       </parentRef>
-      <dataRef href="urn:uif:com.emc.xcp.artifact.folder:Artifacts/Folders/f_involucrado.folder#//@attributes[name='tipo_id']"/>
+      <dataRef href="urn:uif:com.emc.xcp.artifact.folder:Artifacts/Folders/involucrado.folder#//@attributes[name='tipo_id']"/>
     </contextSelection>
   </columns>
-  <columns label="Nro. Identificacion" sortable="true">
+  <columns label="ID Principal" sortable="true">
     <contextSelection>
       <parentRef>
-        <dataRef href="urn:uif:com.emc.xcp.artifact.folder:Artifacts/Folders/f_involucrado.folder#/"/>
+        <dataRef href="urn:uif:com.emc.xcp.artifact.folder:Artifacts/Folders/involucrado.folder#/"/>
       </parentRef>
-      <dataRef href="urn:uif:com.emc.xcp.artifact.folder:Artifacts/Folders/f_involucrado.folder#//@attributes[name='id']"/>
+      <dataRef href="urn:uif:com.emc.xcp.artifact.folder:Artifacts/Folders/involucrado.folder#//@attributes[name='id_principal']"/>
     </contextSelection>
   </columns>
   <columns label="Fecha Creacion" sortable="true">
     <contextSelection>
       <parentRef>
-        <dataRef href="urn:uif:com.emc.xcp.artifact.folder:Artifacts/Folders/f_involucrado.folder#/"/>
+        <dataRef href="urn:uif:com.emc.xcp.artifact.folder:Artifacts/Folders/involucrado.folder#/"/>
       </parentRef>
       <dataRef href="urn:xcp:com.emc.xcp.artifact.basetype:Artifacts/Base Type/basetype.basetype#//@attributes[name='r_creation_date']"/>
     </contextSelection>
   </columns>
-  <defaultSort ascending="true"/>
-  <dataType xsi:type="nsDatatypes:Folder" href="urn:uif:com.emc.xcp.artifact.folder:Artifacts/Folders/f_involucrado.folder#/"/>
+  <defaultSort ascending="true">
+    <contextSelection>
+      <parentRef>
+        <dataRef href="urn:uif:com.emc.xcp.artifact.folder:Artifacts/Folders/involucrado.folder#/"/>
+      </parentRef>
+      <dataRef href="urn:uif:com.emc.xcp.artifact.folder:Artifacts/Folders/involucrado.folder#//@attributes[name='fullname']"/>
+    </contextSelection>
+  </defaultSort>
+  <dataType xsi:type="nsDatatypes:Folder" href="urn:uif:com.emc.xcp.artifact.folder:Artifacts/Folders/involucrado.folder#/"/>
+  <filters xsi:type="fulltext:StringFilter" name="genero" label="Genero" orderBy="FREQUENCY">
+    <contextSelection>
+      <parentRef>
+        <dataRef href="urn:uif:com.emc.xcp.artifact.folder:Artifacts/Folders/involucrado.folder#/"/>
+      </parentRef>
+      <dataRef href="urn:uif:com.emc.xcp.artifact.folder:Artifacts/Folders/involucrado.folder#//@attributes[name='genero']"/>
+    </contextSelection>
+    <groupBy xsi:type="fulltext:StringGroupBy"/>
+  </filters>
   <filters xsi:type="fulltext:StringFilter" name="pais_nacimiento" label="Pais Nacimiento" orderBy="FREQUENCY">
     <contextSelection>
       <parentRef>
-        <dataRef href="urn:uif:com.emc.xcp.artifact.folder:Artifacts/Folders/f_involucrado.folder#/"/>
+        <dataRef href="urn:uif:com.emc.xcp.artifact.folder:Artifacts/Folders/involucrado.folder#/"/>
       </parentRef>
-      <dataRef href="urn:uif:com.emc.xcp.artifact.folder:Artifacts/Folders/f_involucrado.folder#//@attributes[name='nacimiento_pais']"/>
+      <dataRef href="urn:uif:com.emc.xcp.artifact.folder:Artifacts/Folders/involucrado.folder#//@attributes[name='nacimiento_pais']"/>
     </contextSelection>
     <groupBy xsi:type="fulltext:StringGroupBy"/>
   </filters>
   <filters xsi:type="fulltext:StringFilter" name="profesiones" label="Profesiones" orderBy="FREQUENCY">
     <contextSelection>
       <parentRef>
-        <dataRef href="urn:uif:com.emc.xcp.artifact.folder:Artifacts/Folders/f_involucrado.folder#/"/>
+        <dataRef href="urn:uif:com.emc.xcp.artifact.folder:Artifacts/Folders/involucrado.folder#/"/>
       </parentRef>
-      <dataRef href="urn:uif:com.emc.xcp.artifact.folder:Artifacts/Folders/f_involucrado.folder#//@attributes[name='profesiones']"/>
+      <dataRef href="urn:uif:com.emc.xcp.artifact.folder:Artifacts/Folders/involucrado.folder#//@attributes[name='profesiones']"/>
     </contextSelection>
     <groupBy xsi:type="fulltext:StringGroupBy"/>
   </filters>
   <filters xsi:type="fulltext:StringFilter" name="tipo_persona" label="Tipo Persona" orderBy="FREQUENCY">
     <contextSelection>
       <parentRef>
-        <dataRef href="urn:uif:com.emc.xcp.artifact.folder:Artifacts/Folders/f_involucrado.folder#/"/>
+        <dataRef href="urn:uif:com.emc.xcp.artifact.folder:Artifacts/Folders/involucrado.folder#/"/>
       </parentRef>
-      <dataRef href="urn:uif:com.emc.xcp.artifact.folder:Artifacts/Folders/f_involucrado.folder#//@attributes[name='tipo_persona']"/>
+      <dataRef href="urn:uif:com.emc.xcp.artifact.folder:Artifacts/Folders/involucrado.folder#//@attributes[name='tipo_persona']"/>
     </contextSelection>
     <groupBy xsi:type="fulltext:StringGroupBy"/>
   </filters>
