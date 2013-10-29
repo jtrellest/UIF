@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Require-Bundle: xcpcore, xcpcommons
+Bundle-Version: 1.0.0
+Bundle-Name: uifcore
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: uifcore
+NAMESPACE: uif
+

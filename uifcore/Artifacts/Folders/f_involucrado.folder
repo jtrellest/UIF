@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nsDatatypes:Folder xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:nsAttributeDatatypes="http://xcp.emc.com/attribute_datatypes" xmlns:nsDataserviceContract="http://xcp.emc.com/DataserviceContract" xmlns:nsDatatypes="http://xcp.emc.com/datatypes" xmlns:nsPicklist="http://xcp.emc.com/picklist" urn="urn:uif:com.emc.xcp.artifact.folder:Artifacts/Folders/f_involucrado.folder" categoryId="com.emc.xcp.artifact.folder" name="f_involucrado" label="Involucrado" commentable="true">
+  <attributes name="apellido_paterno" label="Apellido Paterno">
+    <type xsi:type="nsAttributeDatatypes:StringType" length="64"/>
+  </attributes>
+  <attributes name="apellido_materno" label="Apellido Materno">
+    <type xsi:type="nsAttributeDatatypes:StringType" length="64"/>
+  </attributes>
+  <attributes name="nombres" label="Nombres">
+    <type xsi:type="nsAttributeDatatypes:StringType" length="64"/>
+  </attributes>
+  <attributes name="razon_social" label="Razon Social">
+    <type xsi:type="nsAttributeDatatypes:StringType" length="64"/>
+  </attributes>
+  <attributes name="fullname" label="Fullname">
+    <type xsi:type="nsAttributeDatatypes:StringType" length="172"/>
+  </attributes>
+  <attributes name="alias" label="Alias" repeating="true">
+    <type xsi:type="nsAttributeDatatypes:StringType" length="64"/>
+  </attributes>
+  <attributes name="nacimiento_pais" label="Pais Nacimiento">
+    <type xsi:type="nsAttributeDatatypes:StringType" length="64"/>
+  </attributes>
+  <attributes name="nacimiento_departamento" label="Departamento Nacimiento">
+    <type xsi:type="nsAttributeDatatypes:StringType" length="64"/>
+  </attributes>
+  <attributes name="nacimiento_provincia" label="Provincia Nacimiento">
+    <type xsi:type="nsAttributeDatatypes:StringType" length="64"/>
+  </attributes>
+  <attributes name="nacimiento_distrito" label="Distrito Nacimiento">
+    <type xsi:type="nsAttributeDatatypes:StringType" length="64"/>
+  </attributes>
+  <attributes name="emails" label="Emails" repeating="true">
+    <type xsi:type="nsAttributeDatatypes:StringType" length="64"/>
+  </attributes>
+  <attributes name="estado" label="Estado">
+    <type xsi:type="nsAttributeDatatypes:StringType" length="1"/>
+  </attributes>
+  <attributes name="estado_civil" label="Estado Civil">
+    <type xsi:type="nsPicklist:PickListType">
+      <pickList href="urn:uif:com.emc.xcp.artifact.picklist:Artifacts/Picklists/pl_estado_civil.picklist#/"/>
+    </type>
+  </attributes>
+  <attributes name="tipo_persona" label="Tipo Persona">
+    <type xsi:type="nsPicklist:PickListType">
+      <pickList href="urn:uif:com.emc.xcp.artifact.picklist:Artifacts/Picklists/pl_tipo_persona.picklist#/"/>
+    </type>
+  </attributes>
+  <attributes name="genero" label="Genero">
+    <type xsi:type="nsPicklist:PickListType">
+      <pickList href="urn:uif:com.emc.xcp.artifact.picklist:Artifacts/Picklists/pl_genero.picklist#/"/>
+    </type>
+  </attributes>
+  <attributes name="profesiones" label="Profesiones" repeating="true">
+    <type xsi:type="nsAttributeDatatypes:StringType" length="64"/>
+  </attributes>
+  <attributes name="tipo_id" label="Tipo ID">
+    <type xsi:type="nsAttributeDatatypes:StringType" length="30"/>
+  </attributes>
+  <attributes name="id" label="ID">
+    <type xsi:type="nsAttributeDatatypes:StringType" length="64"/>
+  </attributes>
+  <attributes name="fecha_nacimiento" label="Fecha Nacimiento">
+    <type xsi:type="nsAttributeDatatypes:DateTimeType"/>
+  </attributes>
+  <attributes name="fecha_defuncion" label="Fecha Defuncion">
+    <type xsi:type="nsAttributeDatatypes:DateTimeType"/>
+  </attributes>
+  <accessControlPolicy inheritedFromParentFolder="true"/>
+  <defaultFolderPath/>
+  <dataActionContracts categoryId="com.emc.xcp.artifact.dataservice.dataactioncontract" name="da_def_create_f_involucrado" label="Create Involucrado" implCategoryId="com.emc.xcp.artifact.folder">
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="alias" label="Alias" repeating="true">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="apellido_materno" label="Apellido Materno">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="apellido_paterno" label="Apellido Paterno">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="nacimiento_departamento" label="Departamento Nacimiento">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="nacimiento_distrito" label="Distrito Nacimiento">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="emails" label="Emails" repeating="true">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="estado" label="Estado">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="estado_civil" label="Estado Civil">
+      <attributeType xsi:type="nsPicklist:PickListType">
+        <pickList href="urn:uif:com.emc.xcp.artifact.picklist:Artifacts/Picklists/pl_estado_civil.picklist#/"/>
+      </attributeType>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="fecha_defuncion" label="Fecha Defuncion">
+      <attributeType xsi:type="nsAttributeDatatypes:DateTimeType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="fecha_nacimiento" label="Fecha Nacimiento">
+      <attributeType xsi:type="nsAttributeDatatypes:DateTimeType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="fullname" label="Fullname">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="genero" label="Genero">
+      <attributeType xsi:type="nsPicklist:PickListType">
+        <pickList href="urn:uif:com.emc.xcp.artifact.picklist:Artifacts/Picklists/pl_genero.picklist#/"/>
+      </attributeType>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="id" label="ID">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="nombres" label="Nombres">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="nacimiento_pais" label="Pais Nacimiento">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="profesiones" label="Profesiones" repeating="true">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="nacimiento_provincia" label="Provincia Nacimiento">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="razon_social" label="Razon Social">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="tipo_id" label="Tipo ID">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="tipo_persona" label="Tipo Persona">
+      <attributeType xsi:type="nsPicklist:PickListType">
+        <pickList href="urn:uif:com.emc.xcp.artifact.picklist:Artifacts/Picklists/pl_tipo_persona.picklist#/"/>
+      </attributeType>
+    </inputs>
+    <primaryElement dataModel="/"/>
+    <actionType type="Create"/>
+  </dataActionContracts>
+  <dataActionContracts categoryId="com.emc.xcp.artifact.dataservice.dataactioncontract" name="da_def_update_f_involucrado" label="Update Involucrado" implCategoryId="com.emc.xcp.artifact.folder">
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="alias" label="Alias" repeating="true">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="apellido_materno" label="Apellido Materno">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="apellido_paterno" label="Apellido Paterno">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="nacimiento_departamento" label="Departamento Nacimiento">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="nacimiento_distrito" label="Distrito Nacimiento">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="emails" label="Emails" repeating="true">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="estado" label="Estado">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="estado_civil" label="Estado Civil">
+      <attributeType xsi:type="nsPicklist:PickListType">
+        <pickList href="urn:uif:com.emc.xcp.artifact.picklist:Artifacts/Picklists/pl_estado_civil.picklist#/"/>
+      </attributeType>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="fecha_defuncion" label="Fecha Defuncion">
+      <attributeType xsi:type="nsAttributeDatatypes:DateTimeType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="fecha_nacimiento" label="Fecha Nacimiento">
+      <attributeType xsi:type="nsAttributeDatatypes:DateTimeType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="fullname" label="Fullname">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="genero" label="Genero">
+      <attributeType xsi:type="nsPicklist:PickListType">
+        <pickList href="urn:uif:com.emc.xcp.artifact.picklist:Artifacts/Picklists/pl_genero.picklist#/"/>
+      </attributeType>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="id" label="ID">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="nombres" label="Nombres">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="nacimiento_pais" label="Pais Nacimiento">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="profesiones" label="Profesiones" repeating="true">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="nacimiento_provincia" label="Provincia Nacimiento">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="razon_social" label="Razon Social">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="tipo_id" label="Tipo ID">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="tipo_persona" label="Tipo Persona">
+      <attributeType xsi:type="nsPicklist:PickListType">
+        <pickList href="urn:uif:com.emc.xcp.artifact.picklist:Artifacts/Picklists/pl_tipo_persona.picklist#/"/>
+      </attributeType>
+    </inputs>
+    <primaryElement dataModel="/"/>
+    <actionType type="Update"/>
+  </dataActionContracts>
+  <dataActionContracts categoryId="com.emc.xcp.artifact.dataservice.dataactioncontract" name="da_def_delete_f_involucrado" label="Delete Involucrado" implCategoryId="com.emc.xcp.artifact.folder">
+    <primaryElement dataModel="/"/>
+    <actionType type="Delete"/>
+  </dataActionContracts>
+  <superType xsi:type="nsDatatypes:Folder" href="urn:xcp:com.emc.xcp.artifact.folder:Artifacts/Folders/dm_folder.folder#/"/>
+</nsDatatypes:Folder>
